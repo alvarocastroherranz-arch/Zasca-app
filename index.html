@@ -607,16 +607,12 @@ function toggleStory(){
 }
 
 async function addToBrevo(email){
-  const res=await fetch('https://api.brevo.com/v3/contacts',{
+  const res=await fetch('/api/subscribe',{
     method:'POST',
-    headers:{
-      'accept':'application/json',
-      'content-type':'application/json',
-      'api-key':'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'
-    },
-    body:JSON.stringify({email,listIds:[2],updateEnabled:true})
+    headers:{'content-type':'application/json'},
+    body:JSON.stringify({email})
   });
-  return res.ok||res.status===204||res.status===400;
+  return res.ok;
 }
 
 async function go1(){
