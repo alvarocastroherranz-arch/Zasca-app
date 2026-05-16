@@ -26,7 +26,7 @@ export default async function handler(req, res) {
       headers: {
         'accept': 'application/json',
         'content-type': 'application/json',
-        'api-key': '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',
+        'api-key': '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',
       },
       body: JSON.stringify({ email, listIds: [2], updateEnabled: true }),
     });
